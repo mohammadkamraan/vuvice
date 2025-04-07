@@ -19,7 +19,8 @@
   "exports": {
     ".": {
       "import": "./dist/vuevice.js",
-      "require": "./dist/vuevice.umd.cjs"
+      "require": "./dist/vuevice.umd.cjs",
+      "types": "./dist/main.d.ts"
     }
   }
 }
