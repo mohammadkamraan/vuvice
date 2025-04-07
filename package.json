@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vuevice.umd.cjs",
+  "module": "./dist/vuevice.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,5 +15,11 @@
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "vue": "^3.5.13"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/vuevice.js",
+      "require": "./dist/vuevice.umd.cjs"
+    }
   }
 }
