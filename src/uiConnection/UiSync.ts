@@ -13,7 +13,7 @@ export function UiSync<V = unknown, T = unknown>(propertyToWatch: string, valueG
       reactiveValue.attach(componentId)
       const isSubscribed = reactiveValue.updaters.has(componentId)
       return {
-        value: isSubscribed ? valueGetter(reactiveValue.getValue.value as V): this![propertyToWatch].getValue(),
+        value: isSubscribed ? valueGetter(reactiveValue.getValue.value as V): valueGetter(this![propertyToWatch].getValue()),
         unSubscribe: reactiveValue.detach
       }
     }
